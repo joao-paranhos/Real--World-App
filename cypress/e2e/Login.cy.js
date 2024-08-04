@@ -28,7 +28,8 @@ beforeEach(() => {
 
         cy.get('#username').type('Heath93')
         cy.get('#password').type(123)
-        cy.get('button').should('have.css','rgba(0, 0, 0, 0,26)')
+        cy.get('button').should('have.css', 'color', 'rgba(0, 0, 0, 0.26)')
+        cy.get('button').should('be.disabled')
         
 
         
