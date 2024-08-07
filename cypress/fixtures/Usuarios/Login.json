@@ -1,0 +1,13 @@
+{
+    "Login_sucesso":{
+        "Usuario": "Heath93",
+        "Senha": "s3cret"},
+
+    "Login_incorreto":{
+
+        "Senha_3_caracteres":"123",
+        "Senha": "1234"
+    }
+
+    
+}
