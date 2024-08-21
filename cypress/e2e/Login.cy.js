@@ -9,7 +9,7 @@ const chance = new Chance()
 describe('Iremos testar todos os cenarios atuais de login',()=>{
 
 beforeEach(() => {
-    cy.visit('http://localhost:3000/signin')
+    cy.visit('localhost:3000/signin')
 });
     it('Nesse cenário iremos logar  como um usuário de forma correta e validar a cor do botão de login',()=> {
 
