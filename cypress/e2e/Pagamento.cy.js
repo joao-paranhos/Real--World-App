@@ -1,6 +1,9 @@
 import LoginPage from '/Pages/LoginPage'
 import usuarios from '../fixtures/Usuarios/Login.json'
+import PagamentoPage from '/Pages/PagamentoPage'
 const loginpage = new LoginPage()
+const pagamentopage = new PagamentoPage()
+
 
 describe('',()=>{
 
@@ -14,14 +17,17 @@ describe('',()=>{
     })
 
     it('Iremos fazer o pagamento com um valor que temos em conta',()=>{
-
-        cy.get('.MuiButton-contained').click()
-        cy.get('.MuiListItem-gutters').eq(5).click()
-        cy.get('.MuiFormControl-fullWidth').eq(0).type('509.53')
         
 
-    
+        pagamentopage.PagamentoComSaldo()
+        pagamentopage.ValidandoTransferencia()
         
+        
+    })
 
+    it('Iremos fazer uma transação com um valor que não temos em conta. O sistema deve barrar essa ação',()=>{
+
+        pagamentopage.PagamentoSemSaldo()
+        
     })
 })
